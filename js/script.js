@@ -30,7 +30,8 @@ var typed = new Typed("#typed", {
   backSpeed: 10,
   loop: false,
   showCursor: false,
- 
+  // Khởi động confetti
+ confetti.start();
 });
 var retina = window.devicePixelRatio,
   // Math shorthands
@@ -515,7 +516,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   };
   var confetti = new confetti.Context("confetti");
-  confetti.start();
+  
   window.addEventListener("resize", function (event) {
     confetti.resize();
   });
